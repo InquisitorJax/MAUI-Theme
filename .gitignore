@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MauiThemes/.vs/MauiThemes
+/MauiThemes/bin/Debug
+/MauiThemes/obj
+/MauiThemes/MauiThemes.csproj.user
