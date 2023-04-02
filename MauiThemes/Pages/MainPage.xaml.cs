@@ -1,24 +1,21 @@
-﻿namespace MauiThemes.Pages;
+﻿using MauiThemes.ViewModels;
+
+namespace MauiThemes.Pages;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+	private MainViewModel _viewModel;
 
 	public MainPage()
 	{
 		InitializeComponent();
+		BindingContext = _viewModel = new MainViewModel();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	protected override void OnAppearing()
 	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
+		base.OnAppearing();
+		_ = _viewModel.InitializeAsync();
 	}
 }
 
