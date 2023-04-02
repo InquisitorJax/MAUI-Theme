@@ -6,7 +6,13 @@
              xmlns:viewmodels="clr-namespace:MauiThemes.ViewModels"
              x:DataType="viewmodels:MainViewModel"
              BackgroundColor="White">
+	<Shell.ToolbarItems>
+		<ToolbarItem Command="{Binding NavigateToSettingsPageCommand}"
+		             Order="Primary"
+		             Priority="1"
+		             Text="Settings" />
 
+	</Shell.ToolbarItems>
 	<Grid>
 		<CollectionView ItemsSource="{Binding Items}">
 			<CollectionView.ItemTemplate>

@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using MauiThemes.Models;
+using MauiThemes.Pages;
 using System.Collections.ObjectModel;
 
 namespace MauiThemes.ViewModels
@@ -29,6 +31,12 @@ namespace MauiThemes.ViewModels
 			};
 
 			return item;
+		}
+
+		[RelayCommand]
+		private async void NavigateToSettingsPage()
+		{
+			await Shell.Current.GoToAsync(nameof(SettingsPage));
 		}
 
 	}
