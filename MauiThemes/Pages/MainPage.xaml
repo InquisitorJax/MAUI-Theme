@@ -5,7 +5,7 @@
              xmlns:models="clr-namespace:MauiThemes.Models"
              xmlns:viewmodels="clr-namespace:MauiThemes.ViewModels"
              x:DataType="viewmodels:MainViewModel"
-             BackgroundColor="White">
+             BackgroundColor="{DynamicResource WindowBackground}">
 	<Shell.ToolbarItems>
 		<ToolbarItem Command="{Binding NavigateToSettingsPageCommand}"
 		             Order="Primary"
@@ -18,7 +18,7 @@
 			<CollectionView.ItemTemplate>
 				<DataTemplate>
 					<Grid Margin="16" x:DataType="models:Item">
-						<Label Text="{Binding Name}" TextColor="Black" />
+						<Label Text="{Binding Name}" TextColor="{DynamicResource LabelTextColor}" />
 					</Grid>
 				</DataTemplate>
 			</CollectionView.ItemTemplate>
