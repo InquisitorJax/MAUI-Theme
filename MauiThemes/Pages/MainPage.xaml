@@ -15,6 +15,12 @@
 	</Shell.ToolbarItems>
 	<Grid>
 		<CollectionView ItemsSource="{Binding Items}">
+			<CollectionView.ItemsLayout>
+				<GridItemsLayout x:Name="_layout"
+				                 Orientation="Vertical"
+				                 Span="{OnIdiom Phone=1,
+				                                Default=2}" />
+			</CollectionView.ItemsLayout>
 			<CollectionView.ItemTemplate>
 				<DataTemplate>
 					<!--  BUG: Theme colors not applied for border  -->
