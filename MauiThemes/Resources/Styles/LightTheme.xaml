@@ -22,6 +22,8 @@
 	<Color x:Key="SeparatorColor">#F1F2F3</Color>
 	<Color x:Key="ShadowColor">#3F3F3F</Color>
 
+	<SolidColorBrush x:Key="AccentBrush" Color="{DynamicResource Accent}" />
+
 	<Color x:Key="NavBarColor">#FFFFFF</Color>
 	<Color x:Key="NavBarAccent">#00AF78</Color>
 	<Color x:Key="NavBarAccentLight">#95047C54</Color>

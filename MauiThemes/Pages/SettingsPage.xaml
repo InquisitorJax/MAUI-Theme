@@ -4,10 +4,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="SettingsPage"
              BackgroundColor="{DynamicResource WindowBackground}">
-	<VerticalStackLayout>
+	<VerticalStackLayout Margin="16" Spacing="16">
 		<Switch HorizontalOptions="Center"
 		        OnColor="{DynamicResource Accent}"
 		        ThumbColor="{DynamicResource BlandAccent}"
 		        Toggled="Switch_Toggled" />
+
+		<Button Background="{DynamicResource AccentBrush}"
+		        HeightRequest="52"
+		        Text="Press Me!"
+		        TextColor="White"
+		        WidthRequest="100" />
+
+		<Button Text="Test" />
+
 	</VerticalStackLayout>
 </ContentPage>

@@ -17,9 +17,14 @@
 		<CollectionView ItemsSource="{Binding Items}">
 			<CollectionView.ItemTemplate>
 				<DataTemplate>
-					<Grid Margin="16" x:DataType="models:Item">
-						<Label Text="{Binding Name}" TextColor="{DynamicResource LabelTextColor}" />
-					</Grid>
+					<!--  BUG: Theme colors not applied for border  -->
+					<Border Margin="8,4,8,4"
+					        StrokeThickness="0"
+					        Style="{StaticResource CardView}">
+						<Grid Margin="16" x:DataType="models:Item">
+							<Label Text="{Binding Name}" TextColor="{DynamicResource LabelTextColor}" />
+						</Grid>
+					</Border>
 				</DataTemplate>
 			</CollectionView.ItemTemplate>
 		</CollectionView>

@@ -8,11 +8,16 @@ namespace MauiThemes.ViewModels
 {
 	internal partial class MainViewModel : ObservableObject
 	{
+		private bool _isInitialized = false;
 		[ObservableProperty]
 		private ObservableCollection<Item> _items = new();
 
 		public Task InitializeAsync()
 		{
+			if (_isInitialized)
+				return Task.CompletedTask;
+
+			_isInitialized = true;
 			for (int i = 0; i < 100; i++)
 			{
 				Items.Add(CreateItem(i));
