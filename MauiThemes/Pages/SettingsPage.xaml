@@ -18,5 +18,13 @@
 
 		<Button Text="Test" />
 
+		<Border Margin="8,4,8,4"
+		        StrokeThickness="0"
+		        Style="{StaticResource CardView}">
+			<Grid Margin="16">
+				<Label Text="This Name" TextColor="{DynamicResource LabelTextColor}" />
+			</Grid>
+		</Border>
+
 	</VerticalStackLayout>
 </ContentPage>
