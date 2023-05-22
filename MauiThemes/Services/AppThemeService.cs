@@ -2,7 +2,7 @@
 
 
 //doc: https://learn.microsoft.com/en-us/dotnet/maui/user-interface/theming?view=net-maui-7.0
-//issue?: https://github.com/dotnet/maui/issues/8236 - so fixed in 7.0.81 & 8.0.0 preview.3.8149?
+//issue?: https://github.com/dotnet/maui/issues/13619
 // This is still broken for 7.0.302 VS 17.6.0
 
 public class AppThemeService
