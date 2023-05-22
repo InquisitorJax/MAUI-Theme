@@ -12,11 +12,15 @@
 
 		<Button Background="{DynamicResource AccentBrush}"
 		        HeightRequest="52"
-		        Text="Press Me!"
+		        Text="Dynamic Background Color"
 		        TextColor="White"
-		        WidthRequest="100" />
+		        WidthRequest="250" />
 
-		<Button Text="Test" />
+		<Button BackgroundColor="Red"
+		        HeightRequest="52"
+		        Text="static background color"
+		        TextColor="White"
+		        WidthRequest="250" />
 
 		<Border Margin="8,4,8,4"
 		        StrokeThickness="0"
