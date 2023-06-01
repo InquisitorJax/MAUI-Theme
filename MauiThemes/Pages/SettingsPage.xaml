@@ -4,31 +4,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="SettingsPage"
              BackgroundColor="{DynamicResource WindowBackground}">
-	<VerticalStackLayout Margin="16" Spacing="16">
-		<Switch HorizontalOptions="Center"
-		        OnColor="{DynamicResource Accent}"
-		        ThumbColor="{DynamicResource BlandAccent}"
-		        Toggled="Switch_Toggled" />
+    <VerticalStackLayout Margin="16" Spacing="16">
+        <Switch HorizontalOptions="Center"
+                OnColor="{DynamicResource Accent}"
+                ThumbColor="{DynamicResource BlandAccent}"
+                Toggled="Switch_Toggled" />
 
-		<Button Background="{DynamicResource AccentBrush}"
-		        HeightRequest="52"
-		        Text="Dynamic Background Color"
-		        TextColor="White"
-		        WidthRequest="250" />
+        <Button Background="{DynamicResource AccentBrush}"
+                HeightRequest="52"
+                Text="Dynamic Background Color"
+                TextColor="White"
+                WidthRequest="250" />
 
-		<Button BackgroundColor="Red"
-		        HeightRequest="52"
-		        Text="static background color"
-		        TextColor="White"
-		        WidthRequest="250" />
+        <Button BackgroundColor="Red"
+                HeightRequest="52"
+                Text="static background color"
+                TextColor="White"
+                WidthRequest="250" />
 
-		<Border Margin="8,4,8,4"
-		        StrokeThickness="0"
-		        Style="{StaticResource CardView}">
-			<Grid Margin="16">
-				<Label Text="This Name" TextColor="{DynamicResource LabelTextColor}" />
-			</Grid>
-		</Border>
+        <Border Margin="8,4,8,4"
+                StrokeThickness="0"
+                Style="{StaticResource CardView}">
+            <Grid Padding="16" Background="{DynamicResource CardBackgroundBrush}">
+                <Label Text="This Name" TextColor="{DynamicResource LabelTextColor}" />
+            </Grid>
+        </Border>
 
-	</VerticalStackLayout>
+    </VerticalStackLayout>
 </ContentPage>
