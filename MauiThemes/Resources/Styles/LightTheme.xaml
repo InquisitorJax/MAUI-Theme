@@ -1,9 +1,7 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
-<?xaml-comp compile="true" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ResourceDictionary x:Class="MauiThemes.Resources.Styles.LightTheme"
                     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-
     <Color x:Key="WindowBackground">#F1F5F9</Color>
     <Color x:Key="CardBackground">#FFFFFF</Color>
     <Color x:Key="BlandAccentLight">#B7B7B7</Color>
