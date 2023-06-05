@@ -22,13 +22,29 @@
                 TextColor="White"
                 WidthRequest="250" />
 
+        <Label Text="Style:" />
         <Border Margin="8,4,8,4"
                 StrokeThickness="0"
                 Style="{StaticResource CardView}">
-            <Grid Padding="16" Background="{DynamicResource CardBackgroundBrush}">
+            <Grid Padding="16">
                 <Label Text="This Name" TextColor="{DynamicResource LabelTextColor}" />
             </Grid>
         </Border>
+
+
+        <!--  manual property setting works  -->
+        <Label Text="Manual Properties:" />
+        <Border Margin="8,4,8,4"
+                Padding="8"
+                BackgroundColor="{DynamicResource CardBackground}"
+                Stroke="{DynamicResource CardBackground}"
+                StrokeShape="RoundRectangle 8,8,8,8"
+                StrokeThickness="0">
+            <Grid Padding="16">
+                <Label Text="This Name" TextColor="{DynamicResource LabelTextColor}" />
+            </Grid>
+        </Border>
+
 
     </VerticalStackLayout>
 </ContentPage>
