@@ -6,34 +6,40 @@
              xmlns:viewmodels="clr-namespace:MauiThemes.ViewModels"
              x:DataType="viewmodels:MainViewModel"
              BackgroundColor="{DynamicResource WindowBackground}">
-	<Shell.ToolbarItems>
-		<ToolbarItem Command="{Binding NavigateToSettingsPageCommand}"
-		             Order="Primary"
-		             Priority="1"
-		             Text="Settings" />
+    <Shell.ToolbarItems>
+        <ToolbarItem Command="{Binding NavigateToSettingsPageCommand}"
+                     Order="Primary"
+                     Priority="1"
+                     Text="Settings" />
 
-	</Shell.ToolbarItems>
-	<Grid>
-		<CollectionView ItemsSource="{Binding Items}">
-			<CollectionView.ItemsLayout>
-				<GridItemsLayout x:Name="_layout"
-				                 Orientation="Vertical"
-				                 Span="{OnIdiom Phone=1,
-				                                Default=2}" />
-			</CollectionView.ItemsLayout>
-			<CollectionView.ItemTemplate>
-				<DataTemplate>
-					<!--  BUG: Theme colors not applied for border  -->
-					<Border Margin="8,4,8,4"
-					        StrokeThickness="0"
-					        Style="{StaticResource CardView}">
-						<Grid Margin="16" x:DataType="models:Item">
-							<Label Text="{Binding Name}" TextColor="{DynamicResource LabelTextColor}" />
-						</Grid>
-					</Border>
-				</DataTemplate>
-			</CollectionView.ItemTemplate>
-		</CollectionView>
-	</Grid>
+    </Shell.ToolbarItems>
+    <Grid RowDefinitions="*, 100">
+        <CollectionView Grid.Row="0" ItemsSource="{Binding Items}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout x:Name="_layout"
+                                 Orientation="Vertical"
+                                 Span="{OnIdiom Phone=1,
+                                                Default=2}" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <!--  BUG: Theme colors not applied for border  -->
+                    <Border Margin="8,4,8,4"
+                            StrokeThickness="0"
+                            Style="{StaticResource CardView}">
+                        <Grid Margin="16" x:DataType="models:Item">
+                            <Label Text="{Binding Name}" TextColor="{DynamicResource LabelTextColor}" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!--  ISsue: https://github.com/dotnet/maui/issues/15189  -->
+        <Button Grid.Row="1"
+                Margin="0,0,64,0"
+                BackgroundColor="Red"
+                Text="See This??" />
+    </Grid>
 
 </ContentPage>

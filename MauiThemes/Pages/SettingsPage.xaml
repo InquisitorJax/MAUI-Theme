@@ -4,47 +4,52 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="SettingsPage"
              BackgroundColor="{DynamicResource WindowBackground}">
-    <VerticalStackLayout Margin="16" Spacing="16">
-        <Switch HorizontalOptions="Center"
-                OnColor="{DynamicResource Accent}"
-                ThumbColor="{DynamicResource BlandAccent}"
-                Toggled="Switch_Toggled" />
+    <Grid RowDefinitions="*, Auto">
+        <VerticalStackLayout Margin="16" Spacing="16">
+            <Switch HorizontalOptions="Center"
+                    OnColor="{DynamicResource Accent}"
+                    ThumbColor="{DynamicResource BlandAccent}"
+                    Toggled="Switch_Toggled" />
 
-        <Button Background="{DynamicResource AccentBrush}"
-                HeightRequest="52"
-                Text="Dynamic Background Color"
-                TextColor="White"
-                WidthRequest="250" />
+            <Button Background="{DynamicResource AccentBrush}"
+                    HeightRequest="52"
+                    Text="Dynamic Background Color"
+                    TextColor="White"
+                    WidthRequest="250" />
 
-        <Button BackgroundColor="Red"
-                HeightRequest="52"
-                Text="static background color"
-                TextColor="White"
-                WidthRequest="250" />
+            <Button BackgroundColor="Red"
+                    HeightRequest="52"
+                    Text="static background color"
+                    TextColor="White"
+                    WidthRequest="250" />
 
-        <Label Text="Style:" />
-        <Border Margin="8,4,8,4"
-                StrokeThickness="0"
-                Style="{StaticResource CardView}">
-            <Grid Padding="16">
-                <Label Text="This Name" TextColor="{DynamicResource LabelTextColor}" />
-            </Grid>
-        </Border>
-
-
-        <!--  manual property setting works  -->
-        <Label Text="Manual Properties:" />
-        <Border Margin="8,4,8,4"
-                Padding="8"
-                BackgroundColor="{DynamicResource CardBackground}"
-                Stroke="{DynamicResource CardBackground}"
-                StrokeShape="RoundRectangle 8,8,8,8"
-                StrokeThickness="0">
-            <Grid Padding="16">
-                <Label Text="This Name" TextColor="{DynamicResource LabelTextColor}" />
-            </Grid>
-        </Border>
+            <Label Text="Style:" />
+            <Border Margin="8,4,8,4"
+                    StrokeThickness="0"
+                    Style="{StaticResource CardView}">
+                <Grid Padding="16">
+                    <Label Text="This Name" TextColor="{DynamicResource LabelTextColor}" />
+                </Grid>
+            </Border>
 
 
-    </VerticalStackLayout>
+            <!--  manual property setting works  -->
+            <Label Text="Manual Properties:" />
+            <Border Margin="8,4,8,4"
+                    Padding="8"
+                    BackgroundColor="{DynamicResource CardBackground}"
+                    Stroke="{DynamicResource CardBackground}"
+                    StrokeShape="RoundRectangle 8,8,8,8"
+                    StrokeThickness="0">
+                <Grid Padding="16">
+                    <Label Text="This Name" TextColor="{DynamicResource LabelTextColor}" />
+                </Grid>
+            </Border>
+
+
+        </VerticalStackLayout>
+        <Button Grid.Row="1"
+                BackgroundColor="Red"
+                Text="test" />
+    </Grid>
 </ContentPage>
