@@ -34,12 +34,6 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-
-        <!--  ISsue: https://github.com/dotnet/maui/issues/15189  -->
-        <Button Grid.Row="1"
-                Margin="0,0,64,0"
-                BackgroundColor="Red"
-                Text="See This??" />
     </Grid>
 
 </ContentPage>

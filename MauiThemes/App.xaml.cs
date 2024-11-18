@@ -8,11 +8,15 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
-
 		AppTheme = new AppThemeService();
 		AppTheme.Initialize();
 	}
 
-	public static AppThemeService AppTheme { get; private set; }
+    protected override Window CreateWindow(IActivationState? activationState)
+    {
+        return new Window(new AppShell());
+    }
+
+
+    public static AppThemeService AppTheme { get; private set; }
 }
